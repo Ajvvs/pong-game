@@ -114,6 +114,7 @@ function moveBall() {
 
   if (ballY >= gameHeight - ball.clientHeight || ballY <= 0) {
     ballSpeedY = -ballSpeedY;
+    playeSound(wallSound);
   }
 
   if (
@@ -122,6 +123,7 @@ function moveBall() {
     ballY <= paddle1Y + paddle1.clientHeight
   ) {
     ballSpeedX = -ballSpeedX;
+    playeSound(paddleSound);
   }
 
   if (
@@ -130,6 +132,7 @@ function moveBall() {
     ballY <= paddle2Y + paddle2.clientHeight
   ) {
     ballSpeedX = -ballSpeedX;
+    playeSound(paddleSound);
   }
 
   if (ballX <= 0) {
